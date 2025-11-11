@@ -1,0 +1,13 @@
+<div class="todo-container">
+    <h2>📝 To-Do List</h2>
+
+    <input [(ngModel)]="newTodo" placeholder="할 일을 입력하세요" />
+    <button (click)="addTodo()">추가</button>
+
+    <ul>
+        <li *ngFor="let todo of todos; let i = index">
+        {{ todo }}
+        <button (click)="deleteTodo(i)">삭제</button>
+        </li>
+    </ul>
+</div>
