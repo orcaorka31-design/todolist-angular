@@ -5,9 +5,10 @@
     <button (click)="addTodo()">추가</button>
 
     <ul>
-        <li *ngFor="let todo of todos; let i = index">
-        {{ todo }}
-        <button (click)="deleteTodo(i)">삭제</button>
+        <li *ngFor="let todo of todos; let i = index" [class.done]="todo.done">
+            <input type="checkbox" [checked]="todo.done" (change)="toggleDone(i)" />
+            <span>{{ todo.text }}</span>
+            <button (click)="deleteTodo(i)">삭제</button>
         </li>
     </ul>
 </div>

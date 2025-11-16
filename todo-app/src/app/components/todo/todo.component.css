@@ -1,26 +1,30 @@
 .todo-container {
-  width: 300px;
-  margin: 50px auto;
-  text-align: center;
-}
-
-input {
-  width: 70%;
-  padding: 5px;
-}
-
-button {
-  margin-left: 5px;
-  padding: 5px 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: sans-serif;
 }
 
 li {
-  margin: 5px 0;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+input[type="checkbox"] {
+  transform: scale(0.9);
+  margin-right: 10px;
+}
+
+li span {
+  font-size: 18px;
+  flex: 1;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+button {
+  margin-left: 10px;
 }
